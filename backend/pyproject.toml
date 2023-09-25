@@ -1,0 +1,19 @@
+[tool.poetry]
+name = "oidc-example"
+version = "0.1.0"
+description = ""
+authors = ["Riley Mathews <rileymathews80@gmail.com>"]
+readme = "README.md"
+packages = [{include = "oidc_example"}]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+django = "^4.2.5"
+django-oauth-toolkit = "^2.3.0"
+django-cors-headers = "^4.2.0"
+pyjwt = "^2.8.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

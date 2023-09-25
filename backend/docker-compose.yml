@@ -1,0 +1,19 @@
+version: "3.8"
+services:
+  dev:
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+      target: dev
+    tty: true
+    stdin_open: true
+    ports:
+      - 8000:8000 # django server
+      - 35729:35729 # live reload server
+    volumes:
+      - .:/code
+      - poetry:/home/docker/.cache
+      - .docker/volumes/.bash_aliases:/home/docker/.bash_aliases
+
+volumes:
+  poetry:
